@@ -37,15 +37,15 @@
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
-    "prepublishOnly": "npm run build",
-    "postinstall": "install-peers -f && cd example && npm i",
-    "start-example": "cd example && npm start",
-    "deploy-example": "cd example && npm run deploy",
-    "dev": "concurrently --kill-others \"npm run build-watch\" \"npm run start-example\"",
+    "prepublishOnly": "yarn run build",
+    "postinstall": "install-peers -f && cd example && yarn i",
+    "start-example": "cd example && yarn start",
+    "deploy-example": "cd example && yarn run deploy",
+    "dev": "concurrently --kill-others \"yarn run build-watch\" \"yarn run start-example\"",
     "test": "ts-node test/test.ts",
-    "pretest": "npm run build",
+    "pretest": "yarn run build",
     "test:lint": "eslint ./src/**/*.ts ./src/**/*.tsx ./example/src/**/*.ts ./example/src/**/*.tsx",
-    "test:lint:fix": "npm run test:lint -- --fix"
+    "test:lint:fix": "yarn run test:lint -- --fix"
   },
   "files": [
     "dist"

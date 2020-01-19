@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -10,6 +10,6 @@ export interface TestComponentProps {
   text?: string;
 }
 
-export const TestComponent: React.FC<TestComponentProps> = ({ text }) => (
-  <Wrapper>{text ? text : 'Test Component'}</Wrapper>
-);
+export const TestComponent: FC<TestComponentProps> = ({ text }) => {
+  return <Wrapper>{text ? text : 'Test Component'}</Wrapper>;
+};
